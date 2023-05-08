@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Оформлення замовлення</title>
+   <link rel="shortcut icon" href="Images/favicon.png" type="image/x-icon">
+   <link rel="stylesheet" href="$Result/css/formalize-page.css">
+</head>
+<body>
+   <div class="wrapper">
+<!-- --------------------
+< Header ↓
+<------------------- -->
+<header class="header js-header">
+    <div class="header__container _container">
+        <div class="header__logos">
+            <a href="#intro" class="header__logo js-nav-link"><img src="Images/Logo.svg" alt="logo"></a>
+            <p class="header__subtitle">Лучшая партнерская сеть в Украине</p>
+        </div>
+        <div class="header__navigation menu">
+            <div class="menu__body js-burger-body">
+                <nav class="menu__nav">
+                    <ul class="menu__list">
+                        <li class="menu__item"><a href="#advantages" class="menu__link js-nav-link">Почему мы</a></li>
+                        <li class="menu__item"><a href="#products" class="menu__link js-nav-link">Товары</a></li>
+                        <li class="menu__item"><a href="#contact-us" class="menu__link js-nav-link">Задать вопрос</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="header__cart-icon _icon-cart"><span>0</span></div>
+            <div class="header__cart cart-header _empty js-cart-header">
+                <div class="cart-header__body">
+                    <div class="cart-header__label">
+                        <p class="cart-header__title">Корзина</p>
+                        <div class="cart-header__close js-cart-close">Закрыть</div>
+                    </div>
+
+                    <!-- Cart empty preview -->
+                    <div class="cart-header__preview preview-cart _empty">
+                        <div class="preview-cart__img">
+                            <img src="Images/Cart/Cart.jpg" alt="">
+                        </div>
+                        <p class="preview-cart__text">Ваша корзина на данный момент пустая</p>
+                        <a href="#products" class="preview-cart__btn">Смотреть товар</a>
+                    </div>
+
+                    <!-- Cart Products -->
+                    <div class="cart-header__products cart-products">
+                        <div class="cart-products__items js-cart-products-items">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Burger menu -->
+        <div class="header__burger -burger js-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="header__eclipse -eclipse"></div>
+</header>
+
+      <main class="main">
+<!-- --------------------
+< Formalize-body ↓
+<------------------- -->
+<section class="formalize">
+    <div class="formalize__container _container">
+        <div class="formalize__form-wrapper">
+            <p class="formalize__title">Оформление заказа</p>
+            <form action="#" id="form" class="formalize__form formalize-form js-formalize-form">
+                <!--todo Contacts data ↓ -->
+                <div class="formalize-form__contacts">
+                    <div class="formalize-form__title _icon-person">Контактные данные</div>
+                    <div class="formalize-form__item">
+                        <label for="form-name" class="formalize-form__label">Имя получателя</label>
+                        <input type="text" id="form-name" name="Name" class="formalize-form__input _req" placeholder="Имя фамилия" autocomplete="off">
+                    </div>
+
+                    <div class="formalize-form__item">
+                        <label for="form-number" class="formalize-form__label">Номер телефона получателя</label>
+                        <input type="text" id="form-number" name="Number" class="formalize-form__input number _req" placeholder="+380ХХХХХХХХХ" autocomplete="off">
+                    </div>
+                    
+                    <div class="formalize-form__item">
+                        <label for="form-email" class="formalize-form__label">Ваш email</label>
+                        <input type="text" id="form-email" name="Email" class="formalize-form__input email _req" placeholder="example@gmail.com" autocomplete="off">
+                    </div>
+                </div>
+
+                <!--todo Delivery ↓ -->
+                <div class="formalize-form__delivery formalize-form__delivery_radio">
+                    <div class="formalize-form__title _icon-delivery">Доставка</div>
+
+                    <div class="formalize-form__item">
+                        <div class="formalize-form__radio radio-formalize radio">
+                            <div class="radio-formalize__item">
+                                <div class="radio-formalize__btn">
+                                    <input id="radio-1" type="radio" name="Delivery" value="Самовывоз из Новой почты" class="radio-formalize__input" checked>
+                                    <label for="radio-1" class="radio-formalize__label"></label>
+                                </div>
+                                <div class="radio-formalize__title">Самовывоз из Новой почты</div>
+                            </div>
+                    
+                            <div class="radio-formalize__item">
+                                <div class="radio-formalize__btn">
+                                    <input id="radio-2" type="radio" name="Delivery" value="Курьер Новая почта" class="radio-formalize__input ">
+                                    <label for="radio-2" class="radio-formalize__label"></label>
+                                </div>
+                                <div class="radio-formalize__title">Курьер Новая почта</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="formalize-form__item">
+                        <label for="form-email" class="formalize-form__label">Город и номер отделения Новой почты</label>
+                        <input type="text" id="form-email" name="Email" class="formalize-form__input _req" placeholder="город Киев, отделение №1" autocomplete="off">
+                    </div>
+                </div>
+                
+                <!--todo Payment ↓ -->
+                <div class="formalize-form__payment">
+                    <div class="formalize-form__title _icon-payment">Оплата</div>
+
+                    <div class="formalize-form__item">
+                        <div class="formalize-form__radio radio-formalize">
+                            <div class="radio-formalize__item">
+                                <div class="radio-formalize__btn">
+                                    <input id="cash-pay" type="radio" name="Payment" value="Оплата при получении" class="radio-formalize__input" checked>
+                                    <label for="cash-pay" class="radio-formalize__label radio__label"></label>
+                                </div>
+                                <div class="radio-formalize__title">Оплата при получении</div>
+                            </div>
+                    
+                            <div class="radio-formalize__item">
+                                <div class="radio-formalize__btn">
+                                    <input id="card-pay" type="radio" name="Payment" value="Оплата картой Visa / Mastercard" class="radio-formalize__input">
+                                    <label for="card-pay" class="radio-formalize__label"></label>
+                                </div>
+                                <div class="radio-formalize__title">Оплата картой Visa / Mastercard</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="formalize-form__item">
+                        <label for="form-message" class="formalize-form__label">Комментарий к заказу <span>(не обязательно)</span></label>
+                        <textarea name="Message" id="form-message" class="formalize-form__area" placeholder="Хотите сообщить что-то ещё?"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="formalize__submit formalize-submit-btn btn">
+                    <p class="formalize-submit-btn__label btn__text">Оформить заказ</p>
+                    <div class="formalize-submit-btn__icon _icon-common-arrow btn__icon"></div>
+                </button>
+            </form>
+        </div>
+
+        <div class="formalize__cart-wrapper">
+            <div class="formalize__cart cart-formalize">            
+                <p class="formalize__title">Корзина</p>
+                <div class="cart-formalize__body">                 
+                    <div class="cart-formalize__items">
+                        <!--todo Item ↓ -->
+                        
+                    </div>
+                </div>
+                <div class="cart-formalize__amount amount-formalize">
+                    <p class="amount-formalize__label">Итого:</p>
+                    <p class="amount-formalize__price"><span>0</span>грн.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="formalize__popup popup-formalize">
+        <div class="popup-formalize__window">
+            <p class="popup-formalize__text _icon-added">Спосибо за заказ !</p>
+            <div class="popup-formalize__btn">Окей</div>
+        </div>
+    </div>
+</section>
+      </main>
+<!-- --------------------
+< Footer ↓
+<------------------- -->
+<footer class="footer">
+    <div class="footer__container _container">
+        <a href="#intro" class="footer__btn btn-footer js-nav-link">
+            <div class="btn-footer__star _icon-big-star"></div>
+            <div class="btn-footer__arrow _icon-common-arrow"></div>
+        </a>
+
+        <div class="footer__body">
+            <nav class="footer__item footer__nav nav-footer">
+                <ul class="nav-footer__list">
+                    <li class="nav-footer__item"><a href="#advantages" class="nav-footer__link js-nav-link">Почему мы</a></li>
+                    <li class="nav-footer__item"><a href="#products" class="nav-footer__link js-nav-link">Товары</a></li>
+                    <li class="nav-footer__item"><a href="#contact-us" class="nav-footer__link js-nav-link">Задать вопрос</a></li>
+                </ul>
+            </nav>
+
+            <div class="footer__item footer__label">
+                <a href="#intro" class="footer__logo js-nav-link"><img src="Images/Logo.svg" alt="logo"></a>
+                <p class="footer__subtitle">Лучшая партнерская сеть в Украине</p>
+            </div>
+
+            <div class="footer__item footer__contacts contacts-footer">
+                <p class="contacts-footer__text">Напишите нам:</p>
+                <a href="https://t.me/T_Mus_69" target="_blank" class="contacts-footer__social contacts-footer__social_tg _icon-tg"></a>
+                <a href="" class="contacts-footer__social contacts-footer__social_viber _icon-viber"></a>
+            </div>
+        </div>
+    </div>
+</footer>   </div>
+
+   <!-- todo: Scripts -->
+   <script type="module" src="$Result/js/formalize-page.js"></script>
+</body>
+</html>
+
