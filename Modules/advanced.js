@@ -1,7 +1,7 @@
 /* --------------------
 | Form modules ↓ 
 --------------------*/
-import {checkEmail, checkNumber} from "Modules/Regex.js";
+import {checkEmail, checkNumber} from "./Modules/Regex.js";
 
 //todo: Send form ↓ 
 let sendForm = (formSelector, processingOptions) => {
