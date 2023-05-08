@@ -1,8 +1,16 @@
 /* --------------------
 | Form modules ↓ 
 --------------------*/
-import {checkEmail} from "../../Modules/Regex.js";
-import {checkNumber} from "../../Modules/Regex.js";
+function checkEmail(input) {
+    return /^\w+([\._-]?\w+)*@\w+([\._-]?\w+)*(\.[a-zA-Z]{2,8})+$/.test(input);
+}
+
+// Regex -→> Number ↓ 
+function checkNumber(input) {
+    let numbersOnly = input.replace(/\D/g, '');
+    return /^(\+|00)\d{1,3}([- ]*)?\(?(\d{3})\)?([- ]*)?\d{3}([- ]*)?\d{2}([- ]*)?\d{2}$/.test(input)
+    && /\d{7,15}/.test(numbersOnly);
+}
 
 //todo: Send form ↓ 
 let sendForm = (formSelector, processingOptions) => {
